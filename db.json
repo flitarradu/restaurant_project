@@ -1,0 +1,40 @@
+{
+	"pub1":[{
+		"id": 1,
+		"name": "pub1",
+		"description": "text",
+		"image": "pub1image",
+		"location_long": "longitudine",
+		"locatioj_lat": "latitudine",
+		"table_number": "nr",
+		"booked_tables": "nr",
+		"contact": "nr",
+		"schedule": "orar"	
+	}],
+	
+	"pub2":[{
+		"id": 2,
+		"name": "pub2",
+		"description": "text",
+		"image": "pub1image",
+		"location_long": "longitudine",
+		"locatioj_lat": "latitudine",
+		"table_number": "nr",
+		"booked_tables": "nr",
+		"contact": "nr",
+		"schedule": "orar"
+	}],
+	
+	"pub3":[{
+		"id": 3,
+		"name": "pub3",
+		"description": "text",
+		"image": "pub1image",
+		"location_long": "longitudine",
+		"locatioj_lat": "latitudine",
+		"table_number": "nr",
+		"booked_tables": "nr",
+		"contact": "nr",
+		"schedule": "orar"
+	}]
+}
