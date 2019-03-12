@@ -1,11 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Navbar from './shared/Navbar';
+import Footer from './shared/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Carousel from './views/home/Carousel';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
-      <div className="App">
-
-      </div>
+      <Router>
+        <div>
+          <Navbar />
+          <Carousel />
+          <Footer  />
+        </div>
+      </Router>
     );
   }
 }
