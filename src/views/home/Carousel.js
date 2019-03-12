@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import { Carousel  } from "react-bootstrap";
+import './home.css';
 
 
-class JumbotronCustom extends Component {
+class CarouselCustom extends Component {
     render() {
       return (
             <Carousel>
             <Carousel.Item>
                 <img
-                className="d-block w-75 mx-auto"
-                src="http://global-citizen.com/wp-content/uploads/2017/03/gunaydin-dubai.jpg"
+                className="d-block w-100 mx-auto"
+                src="http://www.shingobee.com/portals/0/restaurants-bg.jpg"
                 alt="First slide"
                 />
                 <Carousel.Caption>
@@ -19,8 +20,8 @@ class JumbotronCustom extends Component {
             </Carousel.Item>
             <Carousel.Item>
                 <img
-                className="d-block w-75 mx-auto"
-                src="https://www.lingapos.com/wp-content/uploads/2017/08/Table-layout-Linga-Pic.png"
+                className="d-block w-100 mx-auto"
+                src="http://www.thecoburgdublin.com/wp-content/gallery/homepage/dinner-at-the-coburg-restaurant-in-the-conrad-hotel-dublin_0.jpg"
                 alt="Second slide"
                 />
 
@@ -31,19 +32,19 @@ class JumbotronCustom extends Component {
             </Carousel.Item>
             <Carousel.Item>
                 <img
-                className="d-block w-75 mx-auto"
-                src="https://millworkon31st.com/wp-content/uploads/2019/02/iStock-843610508_cover.jpg"
+                className="d-block w-100 mx-auto"
+                src="https://www.davos.ch/fileadmin/_processed_/csm_grischa_restaurant_84a21c1e47.jpg"
                 alt="Third slide"
                 />
 
-                <Carousel.Caption>
+                <Carousel.Caption >
                 <h3>Third slide label</h3>
                 <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                 </Carousel.Caption>
             </Carousel.Item>
-            </Carousel>
+            </Carousel >
       );
     }
 }
 
-export default JumbotronCustom;
+export default CarouselCustom;

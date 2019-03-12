@@ -1,0 +1,48 @@
+.textGray{
+    color:#bbdefb ;
+}
+
+
+.jumbo-style{
+    padding: 30px;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 2.1428571435;
+    background-color: #2BBBAD;
+}
+
+.carousel-style{
+    height: 400px;
+    margin-top: 0px;
+    margin-bottom:  20px;
+}
+
+.button-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.three-testimonials{
+    margin-bottom:  20px;
+}
+
+.cards-title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #444444;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.rounded-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    align-self: auto;
+}
