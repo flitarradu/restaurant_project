@@ -1,5 +1,4 @@
 import React from 'react';
-import {BrowserRouter as Router} from 'react-router-dom';
 import Navbar from '../../shared/Navbar';
 import Footer from '../../shared/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,16 +10,14 @@ import Testimonials from './Testimonials';
 class Home extends React.Component {
     render() {
       return (
-        <Router>
-          <div>
-            <Navbar />
+          <>
+            <Navbar site_name="BookIT" />
             <JumbotronCustom />
             <Carousel />
             <JumbotronSec />
             <Testimonials />
             <Footer  />
-          </div>
-        </Router>
+          </>
       );
     }
   }
