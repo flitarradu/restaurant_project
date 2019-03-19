@@ -15,7 +15,7 @@ class App extends React.Component {
           <Route exact path="/" component={ Home } /> 
           <Route exact path="/list" component={ RestList } />  
           <Route path="/list/details/:id" component={ Details } />         
-          {/* <Details id={1} /> */}
+          <Route path="/login" component={ Loginscreen } />         
 
         </>
       </Router>
