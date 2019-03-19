@@ -57,7 +57,7 @@ class Loginscreen extends React.Component {
   }
   render() {
     return (
-      <div className="Loginscreen">
+      <div className="Loginscreen font-weight-bold mx-auto text-center text-whitegi">
         {this.state.loginscreen}
         <div>
           {this.state.loginmessage}
