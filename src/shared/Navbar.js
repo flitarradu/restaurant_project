@@ -18,6 +18,9 @@ function NavbarCustom (props) {
           <LinkContainer exact to="/list">
             <Nav.Link >Book</Nav.Link>
           </LinkContainer>
+          <LinkContainer exact to="/login">
+            <Nav.Link >Sign in</Nav.Link>
+          </LinkContainer>
         </Nav>
       </Navbar.Collapse>
       <Form inline>
