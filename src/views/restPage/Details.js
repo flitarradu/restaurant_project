@@ -60,7 +60,7 @@ class Details extends React.Component {
             
             <>
             
-                <Navbar />
+                <Navbar site_name="BookIT" git/>
                 <Jumbotron fluid  style={jumboStyle} >
                     <Container >
                         <div className="jumbo-div">
