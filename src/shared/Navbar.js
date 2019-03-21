@@ -22,6 +22,9 @@ function NavbarCustom (props) {
           </LinkContainer>
           <LinkContainer exact to="/favorites">
            <Nav.Link >Favorites</Nav.Link>
+           </LinkContainer> 
+          <LinkContainer exact to="/login">
+            <Nav.Link >Sign in</Nav.Link>
           </LinkContainer>
         </Nav>
       </Navbar.Collapse>

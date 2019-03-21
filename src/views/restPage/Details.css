@@ -1,0 +1,99 @@
+.jumbo-details {
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size: cover;
+    padding:300px 0 200px 0;
+    margin-bottom:70px;
+
+}
+
+@font-face {
+    font-family: "Raleway Black";
+    src: url("../../shared/fonts/Raleway-Black.ttf");
+
+}
+
+.jumbo-tile {
+    font-family: 'Raleway Black, Arial, sans-serif';
+    font-weight: bold;
+    font-style: normal;
+}
+
+.jumbo-div {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around;  */
+}
+
+.jumbo-elements{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;  
+    position: absolute; 
+    float : left; 
+    color: #f2e6e8;
+    text-shadow: 1px 1px 2px black, 0 0 15px black, 0 0 5px darkblue;
+
+}
+
+.reserve-div{
+    border: 1px solid orange;
+    width: 30%;
+    height: 60px;
+    position: relative;
+ 
+}
+
+.reserve-bttn{
+    position: absolute;
+    margin-left: 70%;
+    margin-top: -45px;
+}
+
+hr {
+    display: block;
+    width: 98%;
+    margin-left:30px;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    padding: 0;
+}
+.rest-description{
+    width: 100%;
+    text-indent: 2em;
+    text-align: justify;
+}
+
+.card-image{
+    display: block;
+    position: relative;
+    margin-left: 20px;
+    margin-right: auto;
+    width: 150px;
+    float: right;
+ }
+
+ .clearfix {
+    overflow: auto;
+  }
+
+  .icon-size{ 
+      width: 5px;
+      height: 5px;
+  }
+
+  .map-text{
+      width: 85%;
+  }
+
+  .content-margins{
+      margin-left: 10%;
+      margin-right: 10%;
+  }
+
+
+  .leaflet-container {
+    height: 400px;
+    width: 85%;
+}
