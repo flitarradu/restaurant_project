@@ -5,7 +5,7 @@ import './Navbar.css';
 import logo from '../shared/img/Logo.png';
 import UserContext from './user.context';
 
-function NavbarCustom (props) {
+function NavbarLoggedIn (props) {
   return (
     <UserContext.Consumer>
       {
@@ -31,16 +31,15 @@ function NavbarCustom (props) {
                 </Nav>
                
               </Navbar.Collapse>
-              <Form inline>
+              <Form inline>                 
+                <div className="text-primary mr-2" >
+                    Welcome {value.user.first_name}
+                 </div>
               <div className="btn-toolbar">
-               
-                <LinkContainer exact to="/login">        
-                <Button variant="success" className="btn-group mr-2">Log in</Button>
-                  </LinkContainer> 
-                <LinkContainer exact to="/register">        
-                  <Button variant="outline-primary" >Sign up</Button>
+                <LinkContainer exact to="/accont">        
+                  <Button variant="outline-primary" >Account</Button>
                 </LinkContainer> 
-                </div>
+              </div>
               </Form>
             </Navbar>
           
@@ -51,4 +50,4 @@ function NavbarCustom (props) {
   );
 }
 
-export default NavbarCustom;
+export default NavbarLoggedIn;

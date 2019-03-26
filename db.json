@@ -1,86 +1,110 @@
 {
-
-	"restaurants":[
-
-		{
-			"id": 1,
-			"name": "Restaurant 1",
-			"short_descr": "Short descr for rest1",
-			"description": "Dynamic scale and impact benefit corporation; emerging contextualize peaceful global the equal opportunity. Parse gender rights resist empower communities living a fully ethical life replicable resilient social innovation. Think tank mass incarceration collaborate, human-centered resilient dynamic catalyze. Innovation, problem-solvers, activate; indicators resilient program area entrepreneur. Preliminary thinking then strengthening infrastructure; B-corp shared unit of analysis sustainable. ",
-			"image": "https://i.pinimg.com/236x/f4/6f/55/f46f55289c612c2e87691e133ecd3872.jpg",
-			"location_long": 45.699310,
-			"location_lat": 25.640740,
-			"address": "Kogalniceanu nr. 15, Brasov",
-			"table_number": "nr",
-			"booked_tables": "nr",
-			"contact": "0755.998.844",
-			"schedule": "10:00 - 22:00",
-			"banner": "https://png.pngtree.com/thumb_back/fw800/back_pic/03/54/23/215799bb0f2d2d5.jpg"
-		},
-		{
-			"id": 2,
-			"name": "Restaurant 2",
-			"description": "ocial impact emerging state of play social intrapreneurship, LGBTQ+ collaborate correlation agile because. Inclusive inspirational design thinking technology grit catalyze sustainable. LGBTQ+, black lives matter, a thought leadership move the needle catalyze then catalyze we must stand up. Bandwidth sustainable, social entrepreneurship, social entrepreneurship citizen-centered. Save the world; social impact communities best practices thought provoking external partners. ",
-			"short_descr": "Short descr for rest2",			
-			"image": "https://static.vecteezy.com/system/resources/thumbnails/000/183/257/small/Coffee_Shop_Logo.jpg",
-			"location_long": 45.699310,
-			"location_lat": 25.640740,
-			"table_number": "nr",
-			"booked_tables": "nr",
-			"contact": "nr",
-			"schedule": "orar",
-			"banner": "https://png.pngtree.com/thumb_back/fw800/back_pic/04/50/04/06585c89ea276a3.jpg"
-		},
-		
-		{
-			"id": 3,
-			"name": "Restaurant 3",
-			"short_descr": "Short descr for rest3",
-			"description": "Preliminary thinking; mobilize move the needle co-creation best practices shared vocabulary co-create inspiring. Milestones youth social impact, catalyze; entrepreneur strategize triple bottom line triple bottom line invest. Boots on the ground venture philanthropy strategy, greenwashing scalable problem-solvers ecosystem effective. Collaborative consumption citizen-centered, contextualize disrupt challenges and opportunities support empathetic external partners. ",
-			"image": "https://i.pinimg.com/236x/19/9e/8d/199e8d8813625149c45e6709a837d190--elephant-logo-brewery-logos.jpg",
-			"location_long": "45.699310",
-			"location_lat": "25.640740",
-			"table_number": "nr",
-			"booked_tables": "nr",
-			"contact": "nr",
-			"schedule": "orar",
-			"banner": "https://png.pngtree.com/thumb_back/fw800/back_pic/04/50/08/15585c91b38a772.jpg"
-		},
-
-		{
-			"id": 4,
-			"name": "Restaurant 4",
-			"description": "Framework but efficient social capital do-gooder social innovation. Ideate, preliminary thinking data, ideate cultivate LGBTQ+ accessibility. State of play outcomes collaborative cities support co-create impact justice thought provoking. Agile; movements uplift communities indicators, engaging transparent. Social capital synergy problem-solvers collaborative cities, entrepreneur, white paper framework entrepreneur. ",
-			"short_descr": "Short descr for rest4",
-			"image": "https://static.vecteezy.com/system/resources/thumbnails/000/275/019/small/10_cmVzdGF1cmFudF9sb2dvLTA4.jpg",
-			"location_long": "longitudine",
-			"location_lat": "latitudine",
-			"table_number": "nr",
-			"booked_tables": "nr",
-			"contact": "nr",
-			"schedule": "orar",
-			"banner": "https://png.pngtree.com/thumb_back/fh260/back_pic/05/16/94/4959b79b65d46ff.jpg"
-		},
-		
-		{
-			"id": 5,
-			"name": "Restaurant 5",
-			"short_descr": "Short descr for rest5",			
-			"description": "Then inspirational segmentation preliminary thinking LGBTQ+ social impact incubator scale and impact. Correlation, rubric data; her body her rights but theory of change engaging white paper collaborative consumption. Expose the truth challenges and opportunities NGO sustainable game-changer. Initiative, corporate social responsibility correlation our work best practices issue outcomes indicators. ",
-			"image": "https://i.pinimg.com/236x/da/82/40/da824025e6bc179a9b82839785227bde--s-logo.jpg",
-			"location_long": "longitudine",
-			"location_lat": "latitudine",
-			"table_number": "nr",
-			"booked_tables": "nr",
-			"contact": "nr",
-			"schedule": "orar",
-			"banner": "https://png.pngtree.com/thumb_back/fw800/back_pic/05/11/92/83599524363507a.jpg"
-		}
-
-		],
-
-	"users":[
-		
-	]
-
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Restaurant 1",
+      "short_descr": "Short descr for rest1",
+      "description": "Dynamic scale and impact benefit corporation; emerging contextualize peaceful global the equal opportunity. Parse gender rights resist empower communities living a fully ethical life replicable resilient social innovation. Think tank mass incarceration collaborate, human-centered resilient dynamic catalyze. Innovation, problem-solvers, activate; indicators resilient program area entrepreneur. Preliminary thinking then strengthening infrastructure; B-corp shared unit of analysis sustainable. ",
+      "image": "https://i.pinimg.com/236x/f4/6f/55/f46f55289c612c2e87691e133ecd3872.jpg",
+      "location_long": 45.69931,
+      "location_lat": 25.64074,
+      "address": "Kogalniceanu nr. 15, Brasov",
+      "table_number": "nr",
+      "booked_tables": "nr",
+      "contact": "0755.998.844",
+      "schedule": "10:00 - 22:00",
+      "favorite": false,
+      "banner": "https://png.pngtree.com/thumb_back/fw800/back_pic/03/54/23/215799bb0f2d2d5.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Restaurant 2",
+      "description": "Social impact emerging state of play social intrapreneurship, LGBTQ+ collaborate correlation agile because. Inclusive inspirational design thinking technology grit catalyze sustainable. LGBTQ+, black lives matter, a thought leadership move the needle catalyze then catalyze we must stand up. Bandwidth sustainable, social entrepreneurship, social entrepreneurship citizen-centered. Save the world; social impact communities best practices thought provoking external partners. ",
+      "short_descr": "Short descr for rest2",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/000/183/257/small/Coffee_Shop_Logo.jpg",
+      "location_long": 45.69931,
+      "location_lat": 25.64074,
+      "table_number": "nr",
+      "booked_tables": "nr",
+      "contact": "nr",
+      "schedule": "orar",
+      "favorite": false,
+      "banner": "https://png.pngtree.com/thumb_back/fw800/back_pic/04/50/04/06585c89ea276a3.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Restaurant 3",
+      "short_descr": "Short descr for rest3",
+      "description": "Preliminary thinking; mobilize move the needle co-creation best practices shared vocabulary co-create inspiring. Milestones youth social impact, catalyze; entrepreneur strategize triple bottom line triple bottom line invest. Boots on the ground venture philanthropy strategy, greenwashing scalable problem-solvers ecosystem effective. Collaborative consumption citizen-centered, contextualize disrupt challenges and opportunities support empathetic external partners. ",
+      "image": "https://i.pinimg.com/236x/19/9e/8d/199e8d8813625149c45e6709a837d190--elephant-logo-brewery-logos.jpg",
+      "location_long": "45.699310",
+      "location_lat": "25.640740",
+      "table_number": "nr",
+      "booked_tables": "nr",
+      "contact": "nr",
+      "schedule": "orar",
+      "favorite": false,
+      "banner": "https://png.pngtree.com/thumb_back/fw800/back_pic/04/50/08/15585c91b38a772.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Restaurant 4",
+      "description": "Framework but efficient social capital do-gooder social innovation. Ideate, preliminary thinking data, ideate cultivate LGBTQ+ accessibility. State of play outcomes collaborative cities support co-create impact justice thought provoking. Agile; movements uplift communities indicators, engaging transparent. Social capital synergy problem-solvers collaborative cities, entrepreneur, white paper framework entrepreneur. ",
+      "short_descr": "Short descr for rest4",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/000/275/019/small/10_cmVzdGF1cmFudF9sb2dvLTA4.jpg",
+      "location_long": "longitudine",
+      "location_lat": "latitudine",
+      "table_number": "nr",
+      "booked_tables": "nr",
+      "contact": "nr",
+      "schedule": "orar",
+      "favorite": false,
+      "banner": "https://png.pngtree.com/thumb_back/fh260/back_pic/05/16/94/4959b79b65d46ff.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Restaurant 5",
+      "short_descr": "Short descr for rest5",
+      "description": "Then inspirational segmentation preliminary thinking LGBTQ+ social impact incubator scale and impact. Correlation, rubric data; her body her rights but theory of change engaging white paper collaborative consumption. Expose the truth challenges and opportunities NGO sustainable game-changer. Initiative, corporate social responsibility correlation our work best practices issue outcomes indicators. ",
+      "image": "https://i.pinimg.com/236x/da/82/40/da824025e6bc179a9b82839785227bde--s-logo.jpg",
+      "location_long": "longitudine",
+      "location_lat": "latitudine",
+      "table_number": "nr",
+      "booked_tables": "nr",
+      "contact": "nr",
+      "schedule": "orar",
+      "favorite": false,
+      "banner": "https://png.pngtree.com/thumb_back/fw800/back_pic/05/11/92/83599524363507a.jpg"
+    }
+  ],
+  "users": [
+    {
+      "first_name": "aaaa",
+      "last_name": "aaaa",
+      "email": "aaaa",
+      "password": "aaaa",
+      "id": 1
+    },
+    {
+      "first_name": "ddd",
+      "last_name": "ddd",
+      "email": "ddd",
+      "password": "ddd",
+      "id": 2
+    },
+    {
+      "first_name": "sss",
+      "last_name": "sss",
+      "email": "sss",
+      "password": "sss",
+      "id": 3
+    },
+    {
+      "first_name": "bbbb",
+      "last_name": "bbbb",
+      "email": "bbbb",
+      "password": "bbbb",
+      "id": 4
+    }
+  ]
 }

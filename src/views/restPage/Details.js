@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Navbar from '../../shared/Navbar';
+import NavbarToggle from '../../shared/NavbarToggle';
 import Footer from '../../shared/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Jumbotron, Container,Button, Modal  } from "react-bootstrap";
@@ -60,7 +60,7 @@ class Details extends React.Component {
             
             <>
             
-                <Navbar site_name="BookIT" git/>
+                <NavbarToggle site_name="BookIT"/>
                 <Jumbotron fluid  style={jumboStyle} >
                     <Container >
                         <div className="jumbo-div">
