@@ -37,8 +37,11 @@ function NavbarLoggedIn (props) {
                  </div>
               <div className="btn-toolbar">
                 <LinkContainer exact to="/accont">        
-                  <Button variant="outline-primary" >Account</Button>
+                  <Button variant="outline-primary" className="btn-group mr-2" >Account</Button>
                 </LinkContainer> 
+                <LinkContainer exact to="/logout">        
+                <Button variant="success" className="btn-group mr-2">Log out</Button>
+                  </LinkContainer> 
               </div>
               </Form>
             </Navbar>

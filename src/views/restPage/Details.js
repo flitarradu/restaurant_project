@@ -55,6 +55,10 @@ class Details extends React.Component {
             backgroundImage: `url(${this.state.rest.banner})`            
         }
 
+        const mapMargin ={
+            marginBottom : "70px"
+        }
+
 
         return(
             
@@ -116,9 +120,9 @@ class Details extends React.Component {
                     <div className="d-block mb-2 map-text">
                     <h4 className="font-weight-bolder  d-inline mr-5 text-info">{this.state.rest.name} </h4>
                      <p className="inline-block d-inline float-right"><Image style={{ width: '40px', heigth: '40px' }} src={location} /> {this.state.rest.address}</p>
-                    </div>
+                </div>
                     
-                    <LeafletMap
+                    <LeafletMap style={mapMargin}
                             center={this.state.coord}
                             zoom={6}
                             maxZoom={10}
@@ -135,7 +139,7 @@ class Details extends React.Component {
                             />
                             <Marker position={this.state.coord}>
                             <Popup>
-                                Popup for any custom information.
+                                {this.state.rest.name}
                             </Popup>
                             </Marker>
                         </LeafletMap>
