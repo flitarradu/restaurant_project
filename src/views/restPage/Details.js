@@ -4,11 +4,12 @@ import NavbarToggle from '../../shared/NavbarToggle';
 import Footer from '../../shared/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Jumbotron, Container,Button, Modal  } from "react-bootstrap";
-import  DatePicker from './DatePicker';
 import './Details.css';
 import Image from 'react-bootstrap/Image'
 import location from './img/location.png';
 import { Map as LeafletMap, TileLayer, Marker, Popup } from 'react-leaflet';
+import DateTimePicker from 'react-datetime-picker';
+import UserContext from '../../shared/user.context';
 
 
 
@@ -20,13 +21,23 @@ class Details extends React.Component {
 
         this.handleShow = this.handleShow.bind(this);
         this.handleClose = this.handleClose.bind(this);
+        this.handleSave = this.handleSave.bind(this);
 
         this.apiURL = `http://localhost:3004/restaurants/${this.props.match.params.id}`;
+        this.userURL = 'http://localhost:3004/reservations';
         this.state = {
+            email : "",
+            reservations : "",
+            date: new Date(),
             show: false,
             rest: {},
             coord: [0, 0]
+            
         };
+        this.onChange = date => this.setState({ date });
+
+
+        
     }
 
     async componentDidMount(){
@@ -36,14 +47,26 @@ class Details extends React.Component {
         this.setState({ rest: resp.data, coord});
     }
  
-    handleClose() {
+    async handleSave() {
         this.setState({ show: false });
+        const userURL = this.userURL;
+        let dateAux = this.state.date.toString();
+        let resDate =  dateAux.substr(3, (dateAux.indexOf('GMT')  - 3)); 
+        var payload = {
+            email : this.context.user.email,
+            reservations : resDate
+        }
+        console.log(payload);
+        await axios.post(userURL, payload)
       }
     
       handleShow() {
         this.setState({ show: true });
       }
 
+      handleClose() {
+        this.setState({ show: false });
+      }
 
     render(){
         const jumboStyle = {
@@ -85,16 +108,26 @@ class Details extends React.Component {
                     Book
                     </Button>
 
-                    <Modal show={this.state.show} onHide={this.handleClose}>
+                    <Modal show={this.state.show} onHide={this.handleClose} size="lg" aria-labelledby="contained-modal-title-vcenter" centered >
                     <Modal.Header closeButton>
                         <Modal.Title>Select details for: {this.state.rest.name}</Modal.Title>
                     </Modal.Header>
-                    <DatePicker />
+                    <div className="">
+                        <h4 className=" ml-4 text-muted">Date &amp; hour: &nbsp;&nbsp;  </h4>
+                        <div>
+                        <DateTimePicker className="ml-4"
+                            onChange={this.onChange}
+                            value={this.state.date}
+                        />
+                        </div>
+                    </div>
+
+                    
                     <Modal.Footer>
                         <Button variant="secondary" onClick={this.handleClose}>
                         Close
                         </Button>
-                        <Button variant="primary" onClick={this.handleClose}>
+                        <Button variant="primary" onClick={this.handleSave}>
                         Save Changes
                         </Button>
                     </Modal.Footer>
@@ -154,5 +187,6 @@ class Details extends React.Component {
     }
 }
 
+Details.contextType = UserContext;
 
 export default Details;

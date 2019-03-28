@@ -6,13 +6,15 @@ import TextField from 'material-ui/TextField';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
 import UserContext from '../../shared/user.context';
+import {Redirect} from 'react-router-dom';
 
 class Login extends React.Component {
   constructor(props){
     super(props);
     this.state={
     username:'',
-    password:''
+    password:'',
+    redirect : false
     }
 
  }
@@ -30,8 +32,8 @@ class Login extends React.Component {
         localStorage.setItem("user", JSON.stringify(resp.data[0]));
         
         this.context.onUserUpdated(resp.data[0]);
-      alert("Login succesful!");  
-      this.props.history.push("/");
+        this.setState({ redirect: true })
+         alert("Login succesful!");  
       }else {
         alert("Username or password not found!");
       }
@@ -40,7 +42,13 @@ class Login extends React.Component {
 
 
 render() {
+    const { redirect } = this.state;
+    console.log("Redirect home");
+    if (redirect) {
+      return <Redirect to='/' />;
+    }
     return (
+      
       <div className="Loginscreen mx-auto text-center">
         <MuiThemeProvider>
           <>

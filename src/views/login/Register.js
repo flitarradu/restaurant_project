@@ -5,6 +5,7 @@ import RaisedButton from "material-ui/RaisedButton";
 import TextField from "material-ui/TextField";
 import axios from "axios";
 import UserContext from '../../shared/user.context';
+import { Redirect } from 'react-router-dom';
 
 
 class Register extends Component {
@@ -14,11 +15,13 @@ class Register extends Component {
       first_name: "",
       last_name: "",
       email: "",
-      password: ""
+      password: "",
+      reservations: "",
+      redirect: false
     };
   }
 
-  async handleClick(event) {
+   async handleClick(event) {
     var apiBaseUrl = "http://localhost:3004";
     console.log(
       "values",
@@ -26,6 +29,7 @@ class Register extends Component {
       this.state.last_name,
       this.state.email,
       this.state.password
+      
     );
 
 
@@ -33,7 +37,8 @@ class Register extends Component {
       first_name: this.state.first_name,
       last_name: this.state.last_name,
       email: this.state.email,
-      password: this.state.password
+      password: this.state.password,
+      reservations: this.state.reservations
     };
 
     const resp = await axios.get(apiBaseUrl + "/users");
@@ -41,12 +46,15 @@ class Register extends Component {
 
     if( isAlreadyRegistered.length === 0 )
     {
-      axios
+       await axios
       .post(apiBaseUrl + "/users", payload)
       this.context.onUserUpdated(payload);
+      
 
       alert("Registration succesful!");
+      this.setState({ redirect: true })
       this.props.history.push("/");
+      
     }else
     {
       alert("Email already exists!");
@@ -56,6 +64,12 @@ class Register extends Component {
   }
 
   render() {
+    const { redirect } = this.state.redirect;
+    console.log("redirect home");
+    if (redirect) {
+      console.log("succesfull");
+      return <Redirect to='/' />;
+    }
     return (
       <div className="Loginscreen mx-auto text-center">
         <MuiThemeProvider>
