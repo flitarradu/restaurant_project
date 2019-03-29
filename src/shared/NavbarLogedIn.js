@@ -7,10 +7,15 @@ import UserContext from './user.context';
 
 function NavbarLoggedIn (props) {
   return (
+    
     <UserContext.Consumer>
       {
         (function (value) {
+          let name = value.user.first_name;
+
+          name = name.charAt(0).toUpperCase() + name.slice(1);
           return(
+            
             <Navbar  bg="dark" variant="dark" >
               <LinkContainer to="/">
                 <Navbar.Brand > 
@@ -33,12 +38,15 @@ function NavbarLoggedIn (props) {
               </Navbar.Collapse>
               <Form inline>                 
                 <div className="text-primary mr-2" >
-                    Welcome {value.user.first_name}
+                    Welcome {name}!
                  </div>
               <div className="btn-toolbar">
                 <LinkContainer exact to="/accont">        
-                  <Button variant="outline-primary" >Account</Button>
+                  <Button variant="outline-primary" className="btn-group mr-2" >Account</Button>
                 </LinkContainer> 
+                <LinkContainer exact to="/logout">        
+                <Button variant="success" className="btn-group mr-2">Log out</Button>
+                  </LinkContainer> 
               </div>
               </Form>
             </Navbar>

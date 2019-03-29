@@ -11,6 +11,8 @@ import UserContext from './shared/user.context';
 import UserRedirect from './shared/UserRedirect';
 // import myaccount from './views/profile/myaccount';
 import Myaccount from './views/profile/myaccount';
+import Logout from './shared/Logout';
+
 
 
 class App extends React.Component {
@@ -37,10 +39,12 @@ class App extends React.Component {
             <Route exact path="/" component={ Home } />         
             <Route path="/favorites" component={ ModalSimple } />          
             <Route exact path="/list" component={ RestList } />  
-            <Route path="/list/details/:id" component={ Details } /> 
-            { this.state.user.first_name ? "" :  <Route exact path="/login" component={ Login } />}     
-            {/* <Route path="/login" component={ Login } />          */}
-            { this.state.user.first_name ? "" :  <Route path="/register" component={ Register } />    }  
+            { this.state.user.first_name ?  <Route path="/list/details/:id" component={ Details } /> :   <Route exact path="/list/details/:id" component={ Login } /> } 
+            {/* <Route path="/list/details/:id" component={ Details } />  */}
+            {/* { this.state.user.first_name ? "" :  <Route exact path="/login" component={ Login } />}      */}
+            <Route path="/login" component={ Login } />         
+            { this.state.user.first_name ? "" :  <Route path="/register" component={ Register } />    }          
+            <Route exact path="/logout" component={ Logout } />  
             <Route path="/myaccount" component={ Myaccount } /> 
           </>
         </UserContext.Provider>
