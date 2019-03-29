@@ -13,7 +13,7 @@ function NavbarLoggedIn (props) {
         (function (value) {
           let name = value.user.first_name;
 
-          name = name.charAt(0).toUpperCase() + name.slice(1);
+          name = name[0g].toUpperCase() + name.slice(1);
           return(
             
             <Navbar  bg="dark" variant="dark" >
