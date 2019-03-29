@@ -5,56 +5,69 @@ import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
+import UserContext from '../../shared/user.context';
+import {Redirect} from 'react-router-dom';
 
 
 class Login extends React.Component {
-constructor(props){
-  super(props);
-  this.state={
-  username:'',
-  password:''
-  }
+  constructor(props){
+    super(props);
+    this.state={
+    username:'',
+    password:'',
+    redirect : false
+    }
+
  }
 
- handleClick(event){
-  var apiBaseUrl = "http://localhost:3004/api/";
-  var self = this;
-  var payload={
-  "email":this.state.username,
-  "password":this.state.password
-  }
-  axios.post(apiBaseUrl+'login', payload)
-  .then(function (response) {
-  console.log(response);
-  if(response.data.code === 200){
-  console.log("Login successfull");
-  var uploadScreen=[];
-  // eslint-disable-next-line react/jsx-no-undef
-  uploadScreen.push(<UploadScreen appContext={self.props.appContext}/>)
-  self.props.appContext.setState({loginPage:[],uploadScreen:uploadScreen})
-  }
-  else if(response.data.code === 204){
-  console.log("Username password do not match");
-  alert("username password do not match")
-  }
-  else{
-  console.log("Username does not exists");
-  alert("Username does not exist");
-  }
-  })
-  .catch(function (error) {
-  console.log(error);
-  });
+  componentDidMount(){
+
+    const checkUser = !! this.context.user.first_name;
+    console.log(checkUser);
+    if (checkUser) {
+      this.setState({ redirect: true });
+    }
+    
+}
+
+
+
+  async handleClick(event){
+
+      var apiBaseUrl = "http://localhost:3004/users?first_name="+this.state.username+'&password='+this.state.password;
+      const resp = await axios.get(apiBaseUrl);
+      const isRegistered = !!resp.data[0]//resp.data.filter( item => item.email === this.state.username && item.password === this.state.password);
+      // console.log(isRegistered[0].first_name);
+    
+      if ( isRegistered ){
+        localStorage.setItem("user", JSON.stringify(resp.data[0]));
+        
+        this.context.onUserUpdated(resp.data[0]);
+        this.setState({ redirect: true })
+         alert("Login succesful!");  
+      }else {
+        alert("Username or password not found!");
+      }
+
   }
 
+
 render() {
+    const { redirect } = this.state;
+    console.log("Redirect home");
+    if (redirect) {
+      return <Redirect to='/' />;
+    }
     return (
-      <div>
+      
+      <div className="Loginscreen mx-auto text-center">
         <MuiThemeProvider>
-          <div>
+          <>
           <Navbar
-             title="Login"
-           />
+              title="Login" site_name="BookIT"
+            />
+          <div >
+
            <TextField
              hintText="Enter your Username"
              floatingLabelText="Username"
@@ -70,11 +83,8 @@ render() {
              <br/>
              <RaisedButton label="Submit" primary={true} style={style} onClick={(event) => this.handleClick()}/>
         
-             {/* <RaisedButton label="Submit" primary={true} style={style} />  */}
-
-             
              </div>
-             
+             </>
          </MuiThemeProvider>
          
      </div>
@@ -86,5 +96,6 @@ const style = {
  margin: 15,
 };
 
+Login.contextType = UserContext;
 
 export default Login;

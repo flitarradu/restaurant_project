@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Jumbotron, Button  } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 import './home.css';
 
 
@@ -12,7 +13,9 @@ class JumbotronSec extends Component {
             extra attention to featured content or information.
         </p>
         <div className="button-container">
+          <Link to="/list">
             <Button variant="primary">Book now</Button>
+          </Link>
         </div>
         </Jumbotron>
       );
