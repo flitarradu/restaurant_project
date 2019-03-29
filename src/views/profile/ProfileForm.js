@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 import axios from 'axios';
 import UserContext from '../../shared/user.context';
 
@@ -29,36 +28,33 @@ class ProfileForm extends Component {
       
       <div className="container mx-auto text-center">
 
-        <h1 className="text-muted">My Account</h1>
+        <h1 className="text-info">My Account</h1>
        
         <div className="">
 
           <div className="col-md-12 ">
 
-            <form className="form mx-auto">
+            <form className="form mx-auto text-muted">
 
               <div className="form-group">
-                <label className="col-lg-3 control-label">First name:
-                  <p > {this.state.user.first_name} </p>
-                </label>
+                  <h3>First name:</h3>
+                  <p className="text-primary"> {this.state.user.first_name} </p>
+            
               </div>
 
               <div className="form-group">
-                <label className="col-lg-3 control-label">Last name:             
-                  <input className="form-control" type="text"></input>    
-                </label>           
+                  <h3>Last name:</h3>
+                  <p className="text-primary"> {this.state.user.last_name} </p>       
               </div>
 
               <div className="form-group">
-                <label className="col-lg-3 control-label">Email:                
-                  <input className="form-control" type="text"></input>
-                  </label>
+                  <h3>Email:</h3>
+                  <p className="text-primary"> {this.state.user.email} </p> 
               </div>
 
               <div className="form-group">
-                <label className="col-md-3 control-label">No. of bookings:              
-                  <input className="form-control" type="text"></input>
-                </label>
+                  <h3>Reservations:</h3>
+                  <p className="text-primary"> {this.state.user.email} </p> 
               </div>
 
               <div className="form-group">
