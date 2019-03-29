@@ -41,7 +41,7 @@ function NavbarLoggedIn (props) {
                     Welcome {name}!
                  </div>
               <div className="btn-toolbar">
-                <LinkContainer exact to="/accont">        
+                <LinkContainer exact to="/myaccount">        
                   <Button variant="outline-primary" className="btn-group mr-2" >Account</Button>
                 </LinkContainer> 
                 <LinkContainer exact to="/logout">        
