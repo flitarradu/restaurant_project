@@ -1,16 +1,30 @@
+
 import React, { Component } from "react";
-import { Navbar, Container} from "react-bootstrap";
+import Footer from "react-footer-comp";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
 class FooterCustom extends Component {
   render() {
     return (
-        <Container >
-            <Navbar expand="lg" variant="light" bg="primary" fixed="bottom" className="mtnpm install --save google-maps-react-5">
-                <Navbar.Brand href="#">Footer</Navbar.Brand>
-            </Navbar>
-        </Container>
+      <div>
+
+      <Footer
+        copyrightIcon
+        years={[2018]}
+        height={80}
+        bgColor={"#343a40"}
+        copyrightText
+        copyrightIconStyle={{ color: "white", fontSize: 17, marginRight: 10 }}
+        copyrightTextStyle={{ color: "gray", fontSize: 17, marginRight: 10 }}
+        textStyle={{ color: "#007bff", fontSize: 16, marginRight: 10 }}
+        text={"All rights reserved."}
+        
+      />
+      
+    </div>
+    
     );
   }
 }

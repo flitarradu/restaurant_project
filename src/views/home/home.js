@@ -17,6 +17,7 @@ class Home extends React.Component {
             <JumbotronSec />
             <Testimonials />
             <Footer  />
+          
           </>
       );
     }

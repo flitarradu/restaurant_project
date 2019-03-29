@@ -26,6 +26,9 @@ function NavbarCustom (props) {
           <LinkContainer exact to="/login">
             <Nav.Link >Sign in</Nav.Link>
           </LinkContainer>
+          <LinkContainer exact to="/ContactUs">
+            <Nav.Link >Contact us</Nav.Link>
+          </LinkContainer>
         </Nav>
       </Navbar.Collapse>
       <Form inline>
