@@ -46,17 +46,16 @@ class Register extends Component {
 
     if( isAlreadyRegistered.length === 0 )
     {
-       await axios
+      await axios
       .post(apiBaseUrl + "/users", payload)
       this.context.onUserUpdated(payload);
       
 
-      alert("Registration succesful!");
+      //alert("Registration succesful!");
       this.setState({ redirect: true })
-      this.props.history.push("/");
+      //this.props.history.push("/");
       
-    }else
-    {
+    } else {
       alert("Email already exists!");
     }
 
@@ -64,7 +63,7 @@ class Register extends Component {
   }
 
   render() {
-    const { redirect } = this.state.redirect;
+    const { redirect } = this.state;
     console.log("redirect home");
     if (redirect) {
       console.log("succesfull");

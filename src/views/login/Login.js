@@ -19,6 +19,16 @@ class Login extends React.Component {
 
  }
 
+  componentDidMount(){
+
+    const checkUser = !! this.context.user.first_name;
+    console.log(checkUser);
+    if (checkUser) {
+      this.setState({ redirect: true });
+    }
+    
+}
+
 
 
   async handleClick(event){
