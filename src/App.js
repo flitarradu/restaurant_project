@@ -9,7 +9,8 @@ import Login from './views/login/Login';
 import Register from './views/login/Register';
 import UserContext from './shared/user.context';
 import UserRedirect from './shared/UserRedirect';
-
+// import myaccount from './views/profile/myaccount';
+import Myaccount from './views/profile/myaccount';
 
 
 class App extends React.Component {
@@ -40,7 +41,7 @@ class App extends React.Component {
             { this.state.user.first_name ? "" :  <Route exact path="/login" component={ Login } />}     
             {/* <Route path="/login" component={ Login } />          */}
             { this.state.user.first_name ? "" :  <Route path="/register" component={ Register } />    }  
-         
+            <Route path="/myaccount" component={ Myaccount } /> 
           </>
         </UserContext.Provider>
       </Router>
