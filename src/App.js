@@ -8,8 +8,6 @@ import ModalSimple from '../src/views/favorites/Modal';
 import Login from './views/login/Login';
 import Register from './views/login/Register';
 import UserContext from './shared/user.context';
-import UserRedirect from './shared/UserRedirect';
-// import myaccount from './views/profile/myaccount';
 import Myaccount from './views/profile/myaccount';
 import Logout from './shared/Logout';
 import PrivateRoute from './shared/PrivateRoute';
@@ -21,31 +19,32 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      user: {}
+      user: JSON.parse(localStorage.getItem("user")) || {},
+      onUserUpdated: this.handleUserChange.bind(this)
     };
-
-    this.handleUserChange = this.handleUserChange.bind(this);
   }
 
   handleUserChange(user) {
+    console.log('change');
     this.setState({ user });
   }
 
   render() {
     return (
+       
       <Router>
-         <UserContext.Provider value={ {user: this.state.user, onUserUpdated: this.handleUserChange} }>
-          <>
-            <UserRedirect />
+         <UserContext.Provider value={this.state}>
+            
+           
             <Route exact path="/" component={ Home } />         
-            <Route path="/favorites" component={ ModalSimple } />          
+            <Route exact path="/favorites" component={ ModalSimple } />          
             <Route exact path="/list" component={ RestList } /> 
-            <Route path="/login" component={ Login } />         
-            <PrivateRoute path="/list/details/:id" component={Details} />
-            <Route path="/register" component={ Register } />        
-            <Route exact path="/logout" component={ Logout } />  
-            <Route path="/myaccount" component={ Myaccount } /> 
-          </>
+            <Route exact path="/login" component={ Login } />         
+            <PrivateRoute exact path="/list/details/:id" component={Details} />
+            <Route exact path="/register" component={ Register } />        
+            <PrivateRoute exact path="/logout" component={ Logout } />  
+            <PrivateRoute exact path="/myaccount" component={ Myaccount } /> 
+        
         </UserContext.Provider>
       </Router>
     );
