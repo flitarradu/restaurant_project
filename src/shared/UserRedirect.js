@@ -3,7 +3,7 @@ import UserContext from './user.context';
 
 class UserRedirect extends React.Component{
      componentDidMount() {
-        const user = JSON.parse(localStorage.getItem("user"));
+        const user = ;
         if(user) {
             this.context.onUserUpdated( user);
         }
@@ -11,10 +11,8 @@ class UserRedirect extends React.Component{
         console.log(user);
     }
 
-    render(){
-        return(
-           <> </>
-        );
+    render() {
+        return null;
     }
 
 
