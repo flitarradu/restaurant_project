@@ -52,7 +52,7 @@ class Register extends Component {
       this.context.onUserUpdated(payload);
       
 
-      //alert("Registration succesful!");
+      alert("Registration succesful!");
       this.setState({ redirect: true })
       //this.props.history.push("/");
       

@@ -39,7 +39,8 @@ class App extends React.Component {
             <Route exact path="/" component={ Home } />         
             <Route exact path="/favorites" component={ ModalSimple } />          
             <Route exact path="/list" component={ RestList } /> 
-            <Route exact path="/login" component={ Login } />         
+            <Route exact path="/login" component={ Login } />    
+            <Route exact path="/contact" component={ ContactUs } />    
             <PrivateRoute exact path="/list/details/:id" component={Details} />
             <Route exact path="/register" component={ Register } />        
             <PrivateRoute exact path="/logout" component={ Logout } />  
