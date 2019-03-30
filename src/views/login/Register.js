@@ -8,6 +8,7 @@ import UserContext from '../../shared/user.context';
 import { Redirect } from 'react-router-dom';
 
 
+
 class Register extends Component {
   constructor(props) {
     super(props);
@@ -51,7 +52,7 @@ class Register extends Component {
       this.context.onUserUpdated(payload);
       
 
-      //alert("Registration succesful!");
+      alert("Registration succesful!");
       this.setState({ redirect: true })
       //this.props.history.push("/");
       

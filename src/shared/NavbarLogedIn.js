@@ -30,8 +30,11 @@ function NavbarLoggedIn (props) {
                   <LinkContainer exact to="/list">
                     <Nav.Link >Book</Nav.Link>
                   </LinkContainer>
+                  <LinkContainer exact to="/contact">
+                    <Nav.Link >Contact us</Nav.Link>
+                  </LinkContainer>                  
                   <LinkContainer exact to="/favorites">
-                  <Nav.Link >Favorites</Nav.Link>
+                    <Nav.Link >Favorites</Nav.Link>
                   </LinkContainer> 
                 </Nav>
                
