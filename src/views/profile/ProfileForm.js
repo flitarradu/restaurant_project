@@ -2,24 +2,37 @@ import React, { Component } from 'react';
 // import 'bootstrap/dist/css/bootstrap.css';
 import axios from 'axios';
 import UserContext from '../../shared/user.context';
+import { stringify } from 'querystring';
 
 class ProfileForm extends Component {
   constructor(props){
     super(props);
     this.userURL = `http://localhost:3004/users/`;
+    this.reserveURL = `http://localhost:3004/reservations/`;
+
 
     this.state = {
-      user: {}
+      user: {},
+      reserved: ""
     }
   }
 
   async componentDidMount() {
-    console.log('aaaaa', this.context);
     const resp = await axios.get(this.userURL + this.context.user.id);
-    console.log(resp);
-    this.setState({ user: resp.data });
+    const reservations = await axios.get(this.reserveURL);
 
-    console.log(resp.data);
+    const zaTables = reservations.data.filter( item => item.email === this.context.user.email);
+    const res = zaTables.map( item => item.reservations); 
+    const resString = res.join();
+    console.log(resString);
+
+
+    this.setState({ 
+      user: resp.data,
+      reserved: resString
+     });
+
+
   }
 
 
@@ -54,7 +67,7 @@ class ProfileForm extends Component {
 
               <div className="form-group">
                   <h3>Reservations:</h3>
-                  <p className="text-primary"> {this.state.user.email} </p> 
+                  <p className="text-primary"> {this.state.reserved}</p> 
               </div>
 
               <div className="form-group">
