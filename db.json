@@ -105,6 +105,30 @@
       "password": "radu",
       "reservations": "",
       "id": 4
+    },
+    {
+      "first_name": "Radu",
+      "last_name": "Flitar",
+      "email": "radu",
+      "password": "radu",
+      "reservations": "",
+      "id": 5
+    },
+    {
+      "first_name": "rrr",
+      "last_name": "rrrr",
+      "email": "flitar.radu@gmail.com",
+      "password": "dddd",
+      "reservations": "",
+      "id": 6
+    },
+    {
+      "first_name": "Radu",
+      "last_name": "MArian",
+      "email": "radu@gmail.com",
+      "password": "radu",
+      "reservations": "",
+      "id": 7
     }
   ],
   "reservations": [

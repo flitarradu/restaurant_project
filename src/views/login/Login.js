@@ -34,7 +34,7 @@ class Login extends React.Component {
 
   async handleClick(event){
 
-      var apiBaseUrl = "http://localhost:3004/users?first_name="+this.state.username+'&password='+this.state.password;
+      var apiBaseUrl = "http://localhost:3004/users?email="+this.state.username+'&password='+this.state.password;
       const resp = await axios.get(apiBaseUrl);
       const isRegistered = !!resp.data[0]//resp.data.filter( item => item.email === this.state.username && item.password === this.state.password);
       // console.log(isRegistered[0].first_name);

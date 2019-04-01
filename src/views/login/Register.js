@@ -42,10 +42,12 @@ class Register extends Component {
       reservations: this.state.reservations
     };
 
-    const resp = await axios.get(apiBaseUrl + "/users");
-    const isAlreadyRegistered = resp.data.filter( item => item.email === this.state.email)
+    const resp = await axios.get(apiBaseUrl + "/users?email="+this.state.email);
+    // const isAlreadyRegistered = resp.data.filter( item => item.email === this.state.email)
+    const isAlreadyRegistered = !!resp.data[0];
 
-    if( isAlreadyRegistered.length === 0 )
+    // if( isAlreadyRegistered.length === 0 )
+    if ( !isAlreadyRegistered )
     {
       await axios
       .post(apiBaseUrl + "/users", payload)
