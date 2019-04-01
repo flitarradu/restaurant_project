@@ -28,9 +28,9 @@ class List extends React.Component {
         return(
 
             <div className="container mb-5 mr-auto">
-                <div className=" row justify-content-center">
+                <div className=" row justify-content-center ">
                     {this.state.rest.map(rest => <div key={ rest.id }>
-                        <div className=" p-4">
+                        <div className=" p-4 box">
                             <Card style={{ width: '20rem' }}>
                                
                                 <Link to={"/list/details/"+ rest.id}>

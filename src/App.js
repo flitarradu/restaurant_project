@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router,Route } from 'react-router-dom';
+import { BrowserRouter as Router,Route, Match } from 'react-router-dom';
 import Home from './views/home/home';
 import RestList from './views/RestList/RestList';
 import Details from './views/restPage/Details';
@@ -35,7 +35,7 @@ class App extends React.Component {
       <Router>
          <UserContext.Provider value={this.state}>
             
-           
+            {/* <Match exactly pattern="/facebook" component={() => window.location = 'http://facebook.com'} /> */}
             <Route exact path="/" component={ Home } />         
             <Route exact path="/favorites" component={ ModalSimple } />          
             <Route exact path="/list" component={ RestList } /> 

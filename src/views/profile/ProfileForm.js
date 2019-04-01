@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 // import 'bootstrap/dist/css/bootstrap.css';
 import axios from 'axios';
 import UserContext from '../../shared/user.context';
-import { stringify } from 'querystring';
 
 class ProfileForm extends Component {
   constructor(props){

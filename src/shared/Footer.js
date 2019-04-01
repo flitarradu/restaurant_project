@@ -1,28 +1,45 @@
 
 import React, { Component } from "react";
-import Footer from "react-footer-comp";
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Navbar.css';
 
 
 
 class FooterCustom extends Component {
   render() {
     return (
-      <div>
+      <div className ="footer-custom">
 
-      <Footer
-        copyrightIcon
-        years={[2018]}
-        height={80}
-        bgColor={"#343a40"}
-        copyrightText
-        copyrightIconStyle={{ color: "white", fontSize: 17, marginRight: 10 }}
-        copyrightTextStyle={{ color: "gray", fontSize: 17, marginRight: 10 }}
-        textStyle={{ color: "#007bff", fontSize: 16, marginRight: 10 }}
-        text={"All rights reserved."}
-        
-      />
-      
+
+    <footer className="footer-distributed">
+
+        <div className="footer-right">
+
+            <Link to="/"><i className="fa fa-facebook"></i></Link>
+            <Link to="/"><i className="fa fa-twitter"></i></Link>
+            <Link to="/"><i className="fa fa-linkedin"></i></Link>
+            <Link to="/"><i className="fa fa-github"></i></Link>
+
+        </div>
+
+        <div className="footer-left ">
+
+            <p className="footer-links text-muted">
+                <Link className="link-1 mr-1" to="/">Home</Link>
+
+
+                <Link to="/list" className="mr-1">Book</Link>
+
+                <Link to="/contact" className="mr-1">Contact</Link>
+
+            </p>
+
+            <p>BookIT &copy; 2019</p>
+        </div>
+
+    </footer>
+
     </div>
     
     );
