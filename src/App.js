@@ -8,7 +8,7 @@ import ModalSimple from '../src/views/favorites/Modal';
 import Login from './views/login/Login';
 import Register from './views/login/Register';
 import UserContext from './shared/user.context';
-import Myaccount from './views/profile/myaccount';
+import ProfileForm from './views/profile/ProfileForm';
 import Logout from './shared/Logout';
 import PrivateRoute from './shared/PrivateRoute';
 import ContactUs from './views/ContactUs/ContactUs'
@@ -44,7 +44,7 @@ class App extends React.Component {
             <PrivateRoute exact path="/list/details/:id" component={Details} />
             <Route exact path="/register" component={ Register } />        
             <PrivateRoute exact path="/logout" component={ Logout } />  
-            <PrivateRoute exact path="/myaccount" component={ Myaccount } /> 
+            <PrivateRoute exact path="/myaccount" component={ ProfileForm } /> 
         
         </UserContext.Provider>
       </Router>

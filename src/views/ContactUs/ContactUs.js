@@ -47,7 +47,7 @@ class FormContainer extends Component {
         <div>
 
           <div>
-             <NavbarToggle />
+          <NavbarToggle />
 
             <Container className="mt-5 mb-5">
               
