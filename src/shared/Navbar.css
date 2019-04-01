@@ -304,7 +304,7 @@ section {
   box-sizing: border-box;
   width: 100%;
   text-align: left;
-  font: normal 16px sans-serif;
+  font: 300 16px sans-serif;
   padding: 5px 50px;
   text-decoration: none;
 }
@@ -367,6 +367,12 @@ section {
   margin-left: 3px;
   transition:all .25s;
   text-decoration: none;
+}
+
+.footer-distributed p.footer-links a:hover { 
+  color: wheat;
+  text-decoration: none !important;
+  font: 400 19px sans-serif;
 }
 
 .footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import 'bootstrap/dist/css/bootstrap.css';
+import { LinkContainer } from 'react-router-bootstrap';
 import axios from 'axios';
 import UserContext from '../../shared/user.context';
 
@@ -70,8 +70,10 @@ class ProfileForm extends Component {
               </div>
 
               <div className="form-group">
-                <label className="col-md-3 control-label">            
-                  <input type="button" className="btn btn-primary" value="Logout"></input>
+                <label className="col-md-3 control-label">   
+                  <LinkContainer exact to="/logout">               
+                    <input type="button" className="btn btn-primary" value="Logout"></input>
+                  </LinkContainer> 
                 </label>
               </div>
 

@@ -34,8 +34,11 @@ class App extends React.Component {
        
       <Router>
          <UserContext.Provider value={this.state}>
-            
-            {/* <Match exactly pattern="/facebook" component={() => window.location = 'http://facebook.com'} /> */}
+        
+            <Route path='/facebook' component={() => { window.location = 'https://facebook.com'; return null;} }/>
+            <Route path='/twitter' component={() => { window.location = 'https://twitter.com'; return null;} }/>
+            <Route path='/linkedin' component={() => { window.location = 'https://linkedin.com'; return null;} }/>
+            <Route path='/github' component={() => { window.location = 'https://github.com'; return null;} }/>           
             <Route exact path="/" component={ Home } />         
             <Route exact path="/favorites" component={ ModalSimple } />          
             <Route exact path="/list" component={ RestList } /> 

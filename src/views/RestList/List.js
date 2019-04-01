@@ -34,7 +34,7 @@ class List extends React.Component {
                             <Card style={{ width: '20rem' }}>
                                
                                 <Link to={"/list/details/"+ rest.id}>
-                                    <Card.Img className="cards-image mx-auto text-center" variant="top" src={rest.image} />
+                                    <Card.Img className="cards-image mx-auto text-center mt-3" variant="top" src={rest.image} />
                                 </Link>
                                 
                                 <Card.Body>

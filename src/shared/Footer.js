@@ -16,10 +16,10 @@ class FooterCustom extends Component {
 
         <div className="footer-right">
 
-            <Link to="/"><i className="fa fa-facebook"></i></Link>
-            <Link to="/"><i className="fa fa-twitter"></i></Link>
-            <Link to="/"><i className="fa fa-linkedin"></i></Link>
-            <Link to="/"><i className="fa fa-github"></i></Link>
+            <Link to="/facebook"><i className="fa fa-facebook"></i></Link>
+            <Link to="/twitter"><i className="fa fa-twitter"></i></Link>
+            <Link to="/linkedin"><i className="fa fa-linkedin"></i></Link>
+            <Link to="/github"><i className="fa fa-github"></i></Link>
 
         </div>
 
