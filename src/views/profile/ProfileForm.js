@@ -25,8 +25,13 @@ class ProfileForm extends Component {
 
     const zaTables = reservations.data.filter( item => item.email === this.context.user.email);
     const res = zaTables.map( item => item.reservations); 
-    const resString = res.join();
+    let resString = res.join();
     console.log(resString);
+
+    if (resString.length === 0){
+      resString= "There are no reservations made for this user."
+    } 
+
 
 
     this.setState({ 

@@ -91,20 +91,20 @@
       "id": 1
     },
     {
-      "first_name": "Radu",
-      "last_name": "Flitar",
-      "email": "flitar.radu@gmail.com",
-      "password": "aaaa",
-      "reservations": "",
-      "id": 2
-    },
-    {
       "first_name": "bbbb",
       "last_name": "bbbb",
       "email": "bbbb",
       "password": "bbbb",
       "reservations": "",
       "id": 3
+    },
+    {
+      "first_name": "Radu",
+      "last_name": "Flitar",
+      "email": "flitar.radu@gmail.com",
+      "password": "radu",
+      "reservations": "",
+      "id": 4
     }
   ],
   "reservations": [
@@ -117,6 +117,11 @@
       "email": "aaaa",
       "reservations": " Mar 26 2019 20:25:48  at Coffe Shop",
       "id": 2
+    },
+    {
+      "email": "bbbb",
+      "reservations": " Apr 01 2019 21:27:30  at Coffe Shop",
+      "id": 3
     }
   ],
   "messages": [
