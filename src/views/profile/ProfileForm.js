@@ -38,7 +38,7 @@ class ProfileForm extends Component {
   render() {
     return (       
       
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto text-center mt-5">
 
         <h1 className="text-info">My Account</h1>
        
