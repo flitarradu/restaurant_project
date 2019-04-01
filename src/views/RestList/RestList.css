@@ -27,3 +27,22 @@
   line-height: 2.1428571435;
   background-image: linear-gradient(to top, white, #2BBBAD);
  }
+
+ 
+ /*Fade all the DIV when user hovers on any div*/
+ .container:hover .box{
+   filter: alpha(opacity=45);
+   opacity: 0.45;
+   -webkit-transition: opacity .5s ease-in-out;
+   -moz-transition: opacity .5s ease-in-out;
+   -ms-transition: opacity .5s ease-in-out;
+   -o-transition: opacity .5s ease-in-out;
+   transition: opacity .5s ease-in-out;
+ }
+ 
+ /*Fade out the particular DIV when user hover on that DIV*/
+ .container .box:hover{
+   zoom: 1;
+   filter: alpha(opacity=100);
+   opacity: 1;
+ }

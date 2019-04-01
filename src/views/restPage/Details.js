@@ -52,6 +52,7 @@ class Details extends React.Component {
         const userURL = this.userURL;
         let dateAux = this.state.date.toString();
         let resDate =  dateAux.substr(3, (dateAux.indexOf('GMT')  - 3)); 
+        resDate = resDate + " at " + this.state.rest.name;
         var payload = {
             email : this.context.user.email,
             reservations : resDate
