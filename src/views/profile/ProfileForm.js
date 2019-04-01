@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NavbarToggle from '../../shared/NavbarToggle';
 import axios from 'axios';
 import UserContext from '../../shared/user.context';
-// import Footer from "../../shared/Footer";
+import Footer from "../../shared/Footer";
 import { Container } from "react-bootstrap";
 
 class ProfileForm extends Component {
@@ -47,48 +47,47 @@ class ProfileForm extends Component {
 
       
             <form className="container-fluid mb-5 mt-4">
-                    
+              <h3 className="font-weight-bold mx-auto text-center text-primary mt-5">My Account </h3> 
             <Container className="mt-5 mb-5">
                 
-                <h3 className="font-weight-bold mx-auto text-center text-primary">My Account </h3>
+                
     
             </Container>
-                    <div className="list-inline">
+                    <div className="list-inline mb-3">
                         <h4 className="list-inline-item text-muted">First name:</h4>
                         <p className="list-inline-item text-primary"> {this.state.user.first_name} </p>
                   
                     </div>
 
-                    <div className="list-inline">
+                    <div className="list-inline mb-3">
                         <h4 className="list-inline-item text-muted">Last name:</h4>
                         <p className="list-inline-item text-primary"> {this.state.user.last_name} </p>       
                     </div>
 
-                    <div className="list-inline">
+                    <div className="list-inline mb-3">
                         <h4 className="list-inline-item text-muted">Email:</h4>
                         <p className="list-inline-item text-primary"> {this.state.user.email} </p> 
                     </div>
 
-                    <div className="list-inline">
+                    <div className="list-inline mb-3">
                         <h4 className="list-inline-item text-muted">Reservations:</h4>
           
                         <p className="list-inline-item text-primary"> {this.state.reserved} </p> 
                     </div>
                    
-                    <Container className="mt-5 mb-5">
-                      <label className="col-md-3 control-label">            
+                    <Container className="mt-4 mb-5">
+                      <label className="col-md-3 control-label mb-5 ">            
                           <input type="button" className="btn btn-primary" value="Logout"></input>
                       </label>
                     </Container>
-          
                 </form>
 
                
 
-            {/* <Footer /> */}
+           
           </div>       
           
-
+          <Footer />
       </div>
     );
   }
