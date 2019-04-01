@@ -98,22 +98,7 @@
       "reservations": "",
       "id": 3
     },
-    {
-      "first_name": "Radu",
-      "last_name": "Flitar",
-      "email": "flitar.radu@gmail.com",
-      "password": "radu",
-      "reservations": "",
-      "id": 4
-    },
-    {
-      "first_name": "Radu",
-      "last_name": "Flitar",
-      "email": "radu",
-      "password": "radu",
-      "reservations": "",
-      "id": 5
-    },
+
     {
       "first_name": "rrr",
       "last_name": "rrrr",
@@ -129,6 +114,15 @@
       "password": "radu",
       "reservations": "",
       "id": 7
+    },
+
+    {
+      "first_name": "sdadas",
+      "last_name": "dasda",
+      "email": "radu@yahoo.com",
+      "password": "dasdadsa",
+      "reservations": "",
+      "id": 12
     }
   ],
   "reservations": [

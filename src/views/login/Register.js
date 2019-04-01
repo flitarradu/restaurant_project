@@ -42,25 +42,34 @@ class Register extends Component {
       reservations: this.state.reservations
     };
 
-    const resp = await axios.get(apiBaseUrl + "/users?email="+this.state.email);
-    // const isAlreadyRegistered = resp.data.filter( item => item.email === this.state.email)
-    const isAlreadyRegistered = !!resp.data[0];
 
-    // if( isAlreadyRegistered.length === 0 )
-    if ( !isAlreadyRegistered )
-    {
-      await axios
-      .post(apiBaseUrl + "/users", payload)
-      this.context.onUserUpdated(payload);
-      
 
-      alert("Registration succesful!");
-      this.setState({ redirect: true })
-      //this.props.history.push("/");
-      
+     const emailValid = !! this.state.email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+
+    if ( emailValid ){
+      const resp = await axios.get(apiBaseUrl + "/users?email="+this.state.email);
+
+      const isAlreadyRegistered = !!resp.data[0];
+
+      if ( !isAlreadyRegistered )
+      {
+        await axios
+        .post(apiBaseUrl + "/users", payload)
+        this.context.onUserUpdated(payload);
+        
+  
+        alert("Registration succesful!");
+        this.setState({ redirect: true })
+        
+      } else {
+        alert("Email already exists!");
+      }
     } else {
-      alert("Email already exists!");
+      alert("Email not valid");
+      return;
     }
+    // if( isAlreadyRegistered.length === 0 )
+    
 
    
   }
