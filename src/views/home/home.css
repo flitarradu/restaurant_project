@@ -52,3 +52,28 @@
     margin-top: 200px;
 }
 
+
+
+/* Why component */
+
+.span4 .img-left {
+    float: left;
+    width : 100px;
+    margin-left: 20px;
+}
+.span4 .img-right {
+    float: right;
+}
+
+.div-container{
+    width: 110% !important;
+}
+
+.card-image-why{
+    display: block;
+    position: relative;
+    margin-left: 20px;
+    margin-right: auto;
+    width: 500px;
+    float: right;
+ }

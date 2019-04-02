@@ -6,6 +6,7 @@ import JumbotronCustom from './Jumbotron';
 import JumbotronSec from './JumbotronSec';
 import Testimonials from './Testimonials';
 import NavbarToggle from '../../shared/NavbarToggle';
+import WhyComp from './Why';
 
 class Home extends React.Component {
     render() {
@@ -15,6 +16,7 @@ class Home extends React.Component {
             <JumbotronCustom />
             <Carousel />
             <JumbotronSec />
+            <WhyComp />
             <Testimonials />
             <Footer  />
           

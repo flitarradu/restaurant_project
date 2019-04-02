@@ -8,7 +8,7 @@ import './home.css';
 class Testimonials extends React.Component {
     render() {
       return (
-        <div className="pb-2 mb-5">
+        <div className="pb-2 mb-5 mt-5">
             <div className="page-header text-center  ">
                 <h1 className="text-bold cards-title">SEE WHAT OTHERS SAY ABOUT US</h1>      
             </div>
