@@ -17,7 +17,6 @@ class Register extends Component {
       last_name: "",
       email: "",
       password: "",
-      reservations: "",
       redirect: false
     };
   }
@@ -38,8 +37,7 @@ class Register extends Component {
       first_name: this.state.first_name,
       last_name: this.state.last_name,
       email: this.state.email,
-      password: this.state.password,
-      reservations: this.state.reservations
+      password: this.state.password
     };
 
 

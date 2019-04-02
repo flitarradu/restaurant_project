@@ -35,7 +35,7 @@ class FooterCustom extends Component {
 
             </p>
 
-            <p>BookIT &copy; 2019</p>
+            <p className="text-important">BookIT &copy; 2019</p>
         </div>
 
     </footer>
