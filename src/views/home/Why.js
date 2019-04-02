@@ -15,8 +15,8 @@ class WhyComp extends Component {
                 </div>
                 <div className="clearfix rest-description">
                     <Image className="card-image-why float-right" src={require('./img/man1.png')}  />
-                    <div className="block">
-                        <div className="row">
+                    <div className="block mt-5">
+                        <div className="row mt-3">
                             <div className="span4">
                             <img className="img-left"  alt="icon" src={require('./img/star1.png')}/>
                             <div className="content-heading"><h3>Experience </h3></div>
@@ -25,7 +25,7 @@ class WhyComp extends Component {
                             </div>
                         </div>
                         <br/>
-                        <div className="row">
+                        <div className="row mt-5">
                             <div className="span4">
                             <img className="img-left" alt="icon"    src={require('./img/star2.png')}/>
                             <div className="content-heading"><h3>Great services </h3></div>
