@@ -125,6 +125,7 @@ class Details extends React.Component {
 
                     
                     <Modal.Footer>
+                    
                         <Button variant="secondary" onClick={this.handleClose}>
                         Close
                         </Button>

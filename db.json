@@ -14,6 +14,7 @@
       "contact": "0755 998 844",
       "schedule": "10:00 - 22:00",
       "favorite": false,
+      "restID": 1,
       "banner": "https://png.pngtree.com/thumb_back/fw800/back_pic/03/54/23/215799bb0f2d2d5.jpg"
     },
     {
@@ -30,6 +31,7 @@
       "contact": "0755 999 888",
       "schedule": "08:00 - 23:00",
       "favorite": false,
+      "restID": 2,
       "banner": "https://png.pngtree.com/thumb_back/fw800/back_pic/04/50/04/06585c89ea276a3.jpg"
     },
     {
@@ -46,6 +48,7 @@
       "contact": "0722 334 882",
       "schedule": "12:00 - 21:00",
       "favorite": false,
+      "restID": 3,
       "banner": "https://png.pngtree.com/thumb_back/fw800/back_pic/04/50/08/15585c91b38a772.jpg"
     },
     {
@@ -62,6 +65,7 @@
       "contact": "0755 331 828",
       "schedule": "07:00 - 23:00",
       "favorite": false,
+      "restID": 4,
       "banner": "https://png.pngtree.com/thumb_back/fh260/back_pic/05/16/94/4959b79b65d46ff.jpg"
     },
     {
@@ -78,6 +82,7 @@
       "contact": "0755 999 888",
       "schedule": "10:00 - 22:00",
       "favorite": false,
+      "restID": 5,
       "banner": "https://png.pngtree.com/thumb_back/fw800/back_pic/05/11/92/83599524363507a.jpg"
     }
   ],
@@ -88,6 +93,27 @@
       "email": "flitar.radu@gmail.com",
       "password": "radu",
       "id": 1
+    },
+    {
+      "first_name": "Marian",
+      "last_name": "Vasile",
+      "email": "marian@gmail.com",
+      "password": "marian",
+      "id": 2
+    },
+    {
+      "first_name": "Radu",
+      "last_name": "Flitar",
+      "email": "radu@gmail.com",
+      "password": "radu",
+      "id": 3
+    },
+    {
+      "first_name": "florin",
+      "last_name": "sssss",
+      "email": "florin@gmail.com",
+      "password": "florin",
+      "id": 4
     }
   ],
   "reservations": [
@@ -105,6 +131,31 @@
       "email": "bbbb",
       "reservations": " Apr 01 2019 21:27:30  at Coffe Shop",
       "id": 3
+    },
+    {
+      "email": "radu@gmail.com",
+      "reservations": " Apr 02 2019 22:21:26  at Coffe Shop",
+      "id": 4
+    },
+    {
+      "email": "marian@gmail.com",
+      "reservations": " Apr 03 2019 11:31:18  at Bon Variant",
+      "id": 5
+    },
+    {
+      "email": "marian@gmail.com",
+      "reservations": " Apr 24 2019 11:35:51  at Coffe Shop",
+      "id": 6
+    },
+    {
+      "email": "marian@gmail.com",
+      "reservations": " Apr 27 2019 11:36:00  at BREWBOUND",
+      "id": 7
+    },
+    {
+      "email": "flitar.radu@gmail.com",
+      "reservations": " Apr 17 2019 17:22:00  at Coffe Shop",
+      "id": 8
     }
   ],
   "messages": [
@@ -141,6 +192,74 @@
       "email": "adasda",
       "message": "wwww",
       "id": 6
+    },
+    {
+      "name": "sSdasda",
+      "email": "sadsa",
+      "message": "sada",
+      "id": 7
+    }
+  ],
+  "favorites": [
+    {
+      "user": "flitar.radu@gmail.com",
+      "restaurant": 1,
+      "id": 4
+    },
+    {
+      "user": "flitar.radu@gmail.com",
+      "restaurant": 2,
+      "id": 4
+    },
+    {
+      "user": "ssss",
+      "restaurant": 1,
+      "id": 4
+    },
+    {
+      "user": "radu@gmail.com",
+      "restaurant": 1,
+      "id": 5
+    },
+    {
+      "user": "radu@gmail.com",
+      "restaurant": 5,
+      "id": 6
+    },
+    {
+      "user": "radu@gmail.com",
+      "restaurant": 4,
+      "id": 7
+    },
+    {
+      "user": "marian@gmail.com",
+      "restaurant": 1,
+      "id": 8
+    },
+    {
+      "user": "marian@gmail.com",
+      "restaurant": 5,
+      "id": 9
+    },
+    {
+      "user": "flitar.radu@gmail.com",
+      "restaurant": 2,
+      "id": 10
+    },
+    {
+      "user": "florin@gmail.com",
+      "restaurant": 1,
+      "id": 11
+    },
+    {
+      "user": "florin@gmail.com",
+      "restaurant": 4,
+      "id": 12
+    },
+    {
+      "user": "florin@gmail.com",
+      "restaurant": 5,
+      "id": 13
     }
   ]
 }

@@ -4,14 +4,14 @@ import Home from './views/home/home';
 import RestList from './views/RestList/RestList';
 import Details from './views/restPage/Details';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ModalSimple from '../src/views/favorites/Modal';
 import Login from './views/login/Login';
 import Register from './views/login/Register';
 import UserContext from './shared/user.context';
 import ProfileForm from './views/profile/ProfileForm';
 import Logout from './shared/Logout';
 import PrivateRoute from './shared/PrivateRoute';
-import ContactUs from './views/ContactUs/ContactUs'
+import ContactUs from './views/ContactUs/ContactUs';
+import Favorites from './views/favorites/Favorites';
 
 
 class App extends React.Component {
@@ -40,7 +40,7 @@ class App extends React.Component {
             <Route path='/linkedin' component={() => { window.location = 'https://linkedin.com'; return null;} }/>
             <Route path='/github' component={() => { window.location = 'https://github.com'; return null;} }/>           
             <Route exact path="/" component={ Home } />         
-            <Route exact path="/favorites" component={ ModalSimple } />          
+            <Route exact path="/favorites" component={ Favorites } />          
             <Route exact path="/list" component={ RestList } /> 
             <Route exact path="/login" component={ Login } />    
             <Route exact path="/contact" component={ ContactUs } />    

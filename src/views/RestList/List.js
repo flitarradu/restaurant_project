@@ -4,12 +4,13 @@ import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 import './RestList.css';
+import UserContext from '../../shared/user.context';
 
 class List extends React.Component {
     constructor(props){
         super(props);
-
-
+        this.handleFav = this.handleFav.bind(this);
+        this.favURL= `http://localhost:3004/favorites`;
         this.state = { 
             ceva: "text banal",
             rest: []
@@ -23,8 +24,36 @@ class List extends React.Component {
         this.setState({ rest: resp.data});
     }
 
+      async handleFav( id,name){
+
+
+        const checkUser = !! this.context.user.first_name;
+        const user = this.context.user.email;
+        console.log(user);
+        if (! checkUser) {
+            alert("Please login in order to add to favorites!");
+        }else{
+
+        const restName = name;
+        const restId = id;
+        const payload = {
+            user : user,
+            restaurant : restId
+        }
+
+
+            console.log(payload);
+            await axios.post(this.favURL, payload)
+            alert(`${restName} was added to favorites!`);
+        }
+
+
+
+    }
+
     
     render(){
+
         return(
 
             <div className="container mb-5 mr-auto">
@@ -42,9 +71,12 @@ class List extends React.Component {
                                     <Card.Text className="text-center">
                                         {rest.short_descr}
                                     </Card.Text>
-                                    <LinkContainer to={"/list/details/"+ rest.id } >                                   
-                                        <Button className="center-button" variant="primary" >Book now</Button>
-                                    </LinkContainer>
+                                    <div className="btn-group ml-5">
+                                        <LinkContainer to={"/list/details/"+ rest.id } >                                   
+                                            <Button className="btn" variant="primary" >Book now</Button>
+                                        </LinkContainer>                               
+                                            <Button className="btn" variant="secondary" onClick={ this.handleFav.bind(this,rest.id, rest.name)} >Add to fav</Button>
+                                    </div>
                                 </Card.Body>
                                 </Card>
                         </div>
@@ -54,5 +86,7 @@ class List extends React.Component {
         );
     }
 }
+
+List.contextType = UserContext;
 
 export default List;
