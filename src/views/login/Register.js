@@ -74,7 +74,6 @@ class Register extends Component {
 
   render() {
     const { redirect } = this.state;
-    console.log("redirect home");
     if (redirect) {
       console.log("succesfull");
       return <Redirect to='/' />;
