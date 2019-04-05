@@ -29,7 +29,6 @@ class Favorites extends React.Component {
     if (!! favorites){
       const response = await axios.get(this.apiURL);
       const restaurants = response.data.filter( item => favorites.includes(item.restID) )
-      console.log(restaurants);
       this.setState({ rest: restaurants});
     }
 
@@ -42,8 +41,6 @@ class Favorites extends React.Component {
       let card = [];
       let cond = !! this.state.rest[0];
       
-      console.log(this.state.rest);
-      console.log(cond);
       if ( cond ){
        card = this.state.rest.map((rest) => (
 
