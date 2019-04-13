@@ -114,6 +114,13 @@
       "email": "florin@gmail.com",
       "password": "florin",
       "id": 4
+    },
+    {
+      "first_name": "magda",
+      "last_name": "magda",
+      "email": "magda@gmail.com",
+      "password": "magda",
+      "id": 5
     }
   ],
   "reservations": [
@@ -156,6 +163,16 @@
       "email": "flitar.radu@gmail.com",
       "reservations": " Apr 17 2019 17:22:00  at Coffe Shop",
       "id": 8
+    },
+    {
+      "email": "magda@gmail.com",
+      "reservations": " Apr 19 2019 19:31:25  at Bon Variant",
+      "id": 9
+    },
+    {
+      "email": "magda@gmail.com",
+      "reservations": " Apr 05 2019 19:33:13  at BREWBOUND",
+      "id": 10
     }
   ],
   "messages": [
@@ -198,6 +215,12 @@
       "email": "sadsa",
       "message": "sada",
       "id": 7
+    },
+    {
+      "name": "fdsdfa",
+      "email": "flitar.radu@gmail.com",
+      "message": "fdsafsdaf",
+      "id": 8
     }
   ],
   "favorites": [
@@ -260,6 +283,16 @@
       "user": "florin@gmail.com",
       "restaurant": 5,
       "id": 13
+    },
+    {
+      "user": "magda@gmail.com",
+      "restaurant": 1,
+      "id": 14
+    },
+    {
+      "user": "magda@gmail.com",
+      "restaurant": 2,
+      "id": 15
     }
   ]
 }
